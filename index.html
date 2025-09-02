@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime Minister Loan Scheme</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #1a4f8b;
+            --secondary: #3b7f47;
+            --light: #f8f9fa;
+            --dark: #343a40;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f7f9;
+            color: #333;
+        }
+        
+        .navbar {
+            background: linear-gradient(135deg, var(--primary), #0d3a6e);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 80px 0;
+            margin-bottom: 40px;
+        }
+        
+        .section-title {
+            position: relative;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: var(--secondary);
+        }
+        
+        .card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .form-section {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .btn-primary {
+            background-color: var(--primary);
+            border: none;
+            padding: 10px 20px;
+        }
+        
+        .btn-primary:hover {
+            background-color: #0d3a6e;
+        }
+        
+        .bank-logo {
+            height: 40px;
+            margin-right: 15px;
+            margin-bottom: 10px;
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+        
+        footer {
+            background: linear-gradient(135deg, var(--primary), #0d3a6e);
+            color: white;
+            padding: 40px 0;
+            margin-top: 50px;
+        }
+        
+        .file-upload {
+            border: 2px dashed #ccc;
+            padding: 20px;
+            text-align: center;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            cursor: pointer;
+            transition: border-color 0.3s;
+        }
+        
+        .file-upload:hover {
+            border-color: var(--primary);
+        }
+        
+        .file-upload i {
+            font-size: 2rem;
+            color: #6c757d;
+            margin-bottom: 10px;
+        }
+        
+        .progress-bar {
+            background-color: var(--secondary);
+        }
+        
+        .bank-card {
+            transition: all 0.3s;
+        }
+        
+        .bank-card:hover {
+            background-color: #f0f7ff;
+        }
+        
+        .selected-bank {
+            border: 2px solid var(--primary);
+            background-color: #f0f7ff;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-hand-holding-usd me-2"></i>
+                Prime Minister Loan Scheme
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Eligibility</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container text-center">
+            <h1 class="display-4 fw-bold">Prime Minister's Youth Loan Scheme</h1>
+            <p class="lead">Empowering the youth of Pakistan through financial support for business and education</p>
+            <a href="#apply-now" class="btn btn-primary btn-lg mt-3">Apply Now</a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="container mb-5">
+        <h2 class="section-title">How It Works</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 text-center p-4">
+                    <div class="feature-icon">
+                        <i class="fas fa-user-check"></i>
+                    </div>
+                    <h3>Check Eligibility</h3>
+                    <p>Verify your eligibility criteria for the loan scheme based on age, income, and purpose</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 text-center p-4">
+                    <div class="feature-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3>Submit Application</h3>
+                    <p>Fill out the application form with your personal and financial details</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 text-center p-4">
+                    <div class="feature-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Get Approved</h3>
+                    <p>Receive approval and disbursement through your selected bank partner</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Application Form Section -->
+    <section id="apply-now" class="container mb-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="form-section">
+                    <h2 class="section-title">Loan Application Form</h2>
+                    <p class="text-center mb-4">Fill out the form below to apply for the Prime Minister Loan Scheme</p>
+                    
+                    <!-- Progress Bar -->
+                    <div class="mb-5">
+                        <div class="progress" style="height: 10px;">
+                            <div class="progress-bar" role="progressbar" style="width: 33%;" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <div class="d-flex justify-content-between mt-2">
+                            <span>Personal Info</span>
+                            <span>Bank Selection</span>
+                            <span>Documents</span>
+                        </div>
+                    </div>
+                    
+                    <form id="loan-form">
+                        <!-- Personal Information -->
+                        <h4 class="mb-4"><i class="fas fa-user me-2"></i>Personal Information</h4>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="fullName" class="form-label">Full Name *</label>
+                                <input type="text" class="form-control" id="fullName" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="fatherName" class="form-label">Father's Name *</label>
+                                <input type="text" class="form-control" id="fatherName" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="cnic" class="form-label">CNIC Number *</label>
+                                <input type="text" class="form-control" id="cnic" placeholder="XXXXX-XXXXXXX-X" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="dob" class="form-label">Date of Birth *</label>
+                                <input type="date" class="form-control" id="dob" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="phone" class="form-label">Phone Number *</label>
+                                <input type="tel" class="form-control" id="phone" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="email" class="form-label">Email Address *</label>
+                                <input type="email" class="form-control" id="email" required>
+                            </div>
+                            <div class="col-md-12 mb-3">
+                                <label for="address" class="form-label">Full Address *</label>
+                                <textarea class="form-control" id="address" rows="2" required></textarea>
+                            </div>
+                        </div>
+                        
+                        <hr class="my-4">
+                        
+                        <!-- Loan Information -->
+                        <h4 class="mb-4"><i class="fas fa-info-circle me-2"></i>Loan Information</h4>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="loanPurpose" class="form-label">Loan Purpose *</label>
+                                <select class="form-select" id="loanPurpose" required>
+                                    <option value="">Select Purpose</option>
+                                    <option value="business">Business Startup/Expansion</option>
+                                    <option value="education">Higher Education</option>
+                                    <option value="agriculture">Agriculture</option>
+                                    <option value="housing">Housing</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="loanAmount" class="form-label">Loan Amount (PKR) *</label>
+                                <input type="number" class="form-control" id="loanAmount" min="50000" max="5000000" required>
+                            </div>
+                            <div class="col-md-12 mb-3">
+                                <label for="loanDescription" class="form-label">Project Description *</label>
+                                <textarea class="form-control" id="loanDescription" rows="3" required></textarea>
+                            </div>
+                        </div>
+                        
+                        <hr class="my-4">
+                        
+                        <!-- Bank Selection -->
+                        <h4 class="mb-4"><i class="fas fa-university me-2"></i>Select Bank</h4>
+                        <p class="text-muted mb-4">Please select your preferred bank for loan processing:</p>
+                        
+                        <div class="row">
+                            <div class="col-md-4 mb-3">
+                                <div class="card bank-card p-3 text-center" data-bank="national">
+                                    <img src="https://logo.clearbit.com/nbp.com.pk" alt="National Bank" class="bank-logo mx-auto">
+                                    <h5>National Bank</h5>
+                                    <p class="text-muted small">Leading commercial bank</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <div class="card bank-card p-3 text-center" data-bank="habib">
+                                    <img src="https://logo.clearbit.com/hbl.com" alt="Habib Bank" class="bank-logo mx-auto">
+                                    <h5>Habib Bank</h5>
+                                    <p class="text-muted small">Pakistan's largest bank</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <div class="card bank-card p-3 text-center" data-bank="punjab">
+                                    <img src="https://logo.clearbit.com/bankofpunjab.com" alt="Bank of Punjab" class="bank-logo mx-auto">
+                                    <h5>Bank of Punjab</h5>
+                                    <p class="text-muted small">Premier financial institution</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <div class="card bank-card p-3 text-center" data-bank="allied">
+                                    <img src="https://logo.clearbit.com/abl.com" alt="Allied Bank" class="bank-logo mx-auto">
+                                    <h5>Allied Bank</h5>
+                                    <p class="text-muted small">Customer-focused banking</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <div class="card bank-card p-3 text-center" data-bank="js">
+                                    <img src="https://logo.clearbit.com/jsbank.com.pk" alt="JS Bank" class="bank-logo mx-auto">
+                                    <h5>JS Bank</h5>
+                                    <p class="text-muted small">Innovative banking solutions</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <input type="hidden" id="selectedBank" name="selectedBank" required>
+                        
+                        <hr class="my-4">
+                        
+                        <!-- Document Upload -->
+                        <h4 class="mb-4"><i class="fas fa-file-upload me-2"></i>Required Documents</h4>
+                        <p class="text-muted mb-4">Please upload the following documents:</p>
+                        
+                        <div class="row">
+                            <div class="col-md-4 mb-3">
+                                <div class="file-upload" onclick="document.getElementById('cnicFront').click()">
+                                    <i class="fas fa-id-card"></i>
+                                    <p>CNIC Front Side</p>
+                                    <input type="file" id="cnicFront" accept="image/*" hidden required>
+                                    <small class="text-muted">JPG, PNG or PDF</small>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <div class="file-upload" onclick="document.getElementById('cnicBack').click()">
+                                    <i class="fas fa-id-card"></i>
+                                    <p>CNIC Back Side</p>
+                                    <input type="file" id="cnicBack" accept="image/*" hidden required>
+                                    <small class="text-muted">JPG, PNG or PDF</small>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <div class="file-upload" onclick="document.getElementById('applicantPhoto').click()">
+                                    <i class="fas fa-camera"></i>
+                                    <p>Applicant Photo</p>
+                                    <input type="file" id="applicantPhoto" accept="image/*" hidden required>
+                                    <small class="text-muted">JPG or PNG</small>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-check mb-4">
+                            <input class="form-check-input" type="checkbox" id="terms" required>
+                            <label class="form-check-label" for="terms">
+                                I agree to the terms and conditions of the Prime Minister Loan Scheme
+                            </label>
+                        </div>
+                        
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary btn-lg">Submit Application</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5>Prime Minister Loan Scheme</h5>
+                    <p>Empowering the youth of Pakistan through financial support for business and education.</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Contact Us</h5>
+                    <p><i class="fas fa-phone me-2"></i> 0800-12345</p>
+                    <p><i class="fas fa-envelope me-2"></i> info@pmloan.gov.pk</p>
+                    <p><i class="fas fa-map-marker-alt me-2"></i> Islamabad, Pakistan</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white">About the Scheme</a></li>
+                        <li><a href="#" class="text-white">Eligibility Criteria</a></li>
+                        <li><a href="#" class="text-white">FAQ</a></li>
+                        <li><a href="#" class="text-white">Application Status</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="bg-light">
+            <div class="text-center">
+                <p>&copy; 2023 Prime Minister Loan Scheme. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Bank selection functionality
+        document.querySelectorAll('.bank-card').forEach(card => {
+            card.addEventListener('click', function() {
+                // Remove selected class from all cards
+                document.querySelectorAll('.bank-card').forEach(c => {
+                    c.classList.remove('selected-bank');
+                });
+                
+                // Add selected class to clicked card
+                this.classList.add('selected-bank');
+                
+                // Set the hidden input value
+                document.getElementById('selectedBank').value = this.getAttribute('data-bank');
+            });
+        });
+        
+        // Form submission
+        document.getElementById('loan-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Validate bank selection
+            const selectedBank = document.getElementById('selectedBank').value;
+            if (!selectedBank) {
+                alert('Please select a bank for loan processing.');
+                return;
+            }
+            
+            // Validate file uploads
+            const cnicFront = document.getElementById('cnicFront').files.length;
+            const cnicBack = document.getElementById('cnicBack').files.length;
+            const applicantPhoto = document.getElementById('applicantPhoto').files.length;
+            
+            if (!cnicFront || !cnicBack || !applicantPhoto) {
+                alert('Please upload all required documents.');
+                return;
+            }
+            
+            // If all validations pass, show success message
+            alert('Your application has been submitted successfully! You will receive a confirmation email shortly.');
+            this.reset();
+            
+            // Reset bank selection UI
+            document.querySelectorAll('.bank-card').forEach(c => {
+                c.classList.remove('selected-bank');
+            });
+        });
+        
+        // File upload feedback
+        document.querySelectorAll('input[type="file"]').forEach(input => {
+            input.addEventListener('change', function() {
+                if (this.files.length > 0) {
+                    this.parentElement.style.borderColor = '#3b7f47';
+                    this.parentElement.querySelector('i').style.color = '#3b7f47';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
